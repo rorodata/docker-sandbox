@@ -3,7 +3,8 @@ MAINTAINER Anand Chitipothu <anand@rorodata.com>
 
 RUN /opt/conda/bin/conda install jupyter -y --quiet
 ENV PYTHONUNBUFFERED=x
-EXPOSE 8000-9000
+ENV HOME=/data
+WORKDIR /data
 
 pip install tensorflow
 
